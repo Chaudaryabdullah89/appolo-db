@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo E-commerce API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .endpoint {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border-left: 4px solid #007bff;
+        }
+        .method {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .status {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Apollo E-commerce API</h1>
+        <p>The API is running successfully. Here are some available endpoints:</p>
+        
+        <div class="endpoint">
+            <p><span class="method">GET</span> /api/products - Get all products</p>
+        </div>
+        
+        <div class="endpoint">
+            <p><span class="method">GET</span> /api/products/:id - Get product by ID</p>
+        </div>
+        
+        <div class="endpoint">
+            <p><span class="method">POST</span> /api/auth/register - Register new user</p>
+        </div>
+        
+        <div class="endpoint">
+            <p><span class="method">POST</span> /api/auth/login - User login</p>
+        </div>
+        
+        <div class="endpoint">
+            <p><span class="method">GET</span> /api/orders - Get user orders</p>
+        </div>
+        
+        <p class="status">API Status: Running</p>
+    </div>
+</body>
+</html> 
