@@ -184,6 +184,24 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to the Ecommerce API' });
 });
 
+// Handle 404 routes
+app.use((req, res, next) => {
+  res.status(404).json({
+    status: 'error',
+    message: `Can't find ${req.originalUrl} on this server!`
+  });
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(err.status || 500).json({
+    status: 'error',
+    message: err.message || 'Something went wrong!',
+    error: process.env.NODE_ENV === 'development' ? err : undefined
+  });
+});
+
 // Handle unhandled promise rejections
 process.on('unhandledRejection', (err) => {
   console.error('UNHANDLED REJECTION! 💥 Shutting down...');
